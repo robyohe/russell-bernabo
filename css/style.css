@@ -76,9 +76,9 @@ body {
   visibility: hidden; /* JS sets visible after layout */
 }
 
-/* Image state: white card, gold border */
+/* Image state: black card, gold border */
 .ooi-card {
-  background: #ffffff;
+  background: var(--clr-bg);
   padding: 12px;
   border: 1px solid var(--clr-border);
   display: inline-flex;
