@@ -62,6 +62,18 @@ body {
   padding-bottom: 16px;
 }
 
+/* tonos 600 — section subheading */
+.interior-content .copy h2 {
+  font-family: 'tonos', sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
 /* tonos 300 — body copy */
 .interior-content .copy p {
   font-family: 'tonos', sans-serif;
@@ -69,6 +81,20 @@ body {
   font-size: 0.95rem;
   line-height: 1.85;
   margin-bottom: 1.4em;
+}
+
+/* tonos 300 — bulleted list */
+.interior-content .copy ul {
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 1.4em;
+  padding-left: 1.2em;
+}
+
+.interior-content .copy ul li {
+  margin-bottom: 0.3em;
 }
 
 /* tonos 300 — contact info */
