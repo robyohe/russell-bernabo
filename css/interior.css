@@ -119,6 +119,17 @@ body {
   border-color: #444444;
 }
 
+/* Gallery instruction line */
+.gallery-instruction {
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: #888888;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
 /* ============================================================
    GALLERY — CSS columns masonry (natural aspect ratios, no crop)
    ============================================================ */
