@@ -11,8 +11,8 @@
   display: flex;
   align-items: center;
   padding: 0 32px;
-  background: #14100a;
-  border-bottom: 1px solid #453a1e;
+  background: none;
+  border-bottom: none;
   z-index: 10;
 }
 
@@ -30,10 +30,16 @@
   color: #f0e4bb;
 }
 
+/* Override the bottom banner background on interior pages */
+.bottom-banner {
+  background: none;
+  border-top: none;
+}
+
 .interior-content {
-  max-width: 860px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 90px 32px 80px;
+  padding: 90px 40px 80px;
   color: #e8dfc8;
 }
 
@@ -74,75 +80,17 @@
 }
 
 /* ============================================================
-   GALLERY (before/after pairs)
+   GALLERY GRID
    ============================================================ */
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 40px;
-}
-
-.gallery-pair {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.gallery-pair figure {
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.gallery-pair figure img {
-  width: 100%;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.gallery-pair figure:hover img {
-  transform: scale(1.02);
-}
-
-.gallery-pair figcaption {
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #82764e;
-  text-align: center;
-  margin-top: 4px;
-}
-
-.pair-label {
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  color: #746f64;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.placeholder {
-  color: #514a30;
-  font-style: italic;
-  font-size: 0.88rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
 }
 
 /* ============================================================
-   GALLERY HINT
-   ============================================================ */
-
-.gallery-hint {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #746f64;
-  margin-bottom: 36px;
-  margin-top: -24px;
-}
-
-/* ============================================================
-   GALLERY ITEM (click-to-toggle before / after)
+   GALLERY ITEM (click to toggle before / after)
    ============================================================ */
 
 .gallery-item {
@@ -153,31 +101,29 @@
 .item-img-wrap {
   position: relative;
   overflow: hidden;
+  border: 1px solid #6d5a2d;
 }
 
-.item-img-wrap img {
+.item-img-wrap .img-before,
+.item-img-wrap .img-after {
   width: 100%;
   display: block;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.45s ease;
 }
 
-.gallery-item:active .item-img-wrap img {
-  opacity: 0.75;
-}
-
-.item-badge {
+.item-img-wrap .img-after {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  font-family: 'Georgia', serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #d2b982;
-  background: #14100a;
-  padding: 3px 9px;
-  border: 1px solid #453a1e;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.gallery-item.is-after .img-before {
+  opacity: 0;
+}
+
+.gallery-item.is-after .img-after {
+  opacity: 1;
 }
 
 .item-name {
