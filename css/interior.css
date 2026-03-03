@@ -2,6 +2,10 @@
    INTERIOR PAGES (shared by all non-landing pages)
    ============================================================ */
 
+body {
+  background-color: #ffffff;
+}
+
 .interior-header {
   position: fixed;
   top: 0;
@@ -40,7 +44,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 90px 40px 80px;
-  color: #e8dfc8;
+  color: #111111;
 }
 
 .interior-content h1 {
@@ -48,9 +52,9 @@
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #d2b982;
+  color: #111111;
   margin-bottom: 40px;
-  border-bottom: 1px solid #3b3219;
+  border-bottom: 1px solid #cccccc;
   padding-bottom: 16px;
 }
 
@@ -64,19 +68,19 @@
   margin-top: 40px;
   font-size: 0.9rem;
   line-height: 2;
-  color: #c8b87a;
+  color: #111111;
 }
 
 .contact-block a {
-  color: #c8b87a;
+  color: #111111;
   text-decoration: none;
-  border-bottom: 1px solid #514a30;
+  border-bottom: 1px solid #999999;
   transition: color 0.2s, border-color 0.2s;
 }
 
 .contact-block a:hover {
-  color: #f0e4bb;
-  border-color: #8f896b;
+  color: #444444;
+  border-color: #444444;
 }
 
 /* ============================================================
@@ -130,7 +134,11 @@
   font-size: 0.72rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #82764e;
+  color: #555555;
   text-align: center;
   margin-top: 8px;
+}
+
+.item-img-wrap {
+  border: 1px solid #dddddd;
 }
