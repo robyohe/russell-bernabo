@@ -54,6 +54,16 @@
   margin-bottom: 1.4em;
 }
 
+.pull-quote {
+  margin: 2em 0 2em 2em;
+  padding-left: 1.2em;
+  border-left: 2px solid rgba(210, 185, 130, 0.4);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #d2b982;
+  line-height: 1.8;
+}
+
 .contact-block {
   margin-top: 40px;
   font-size: 0.9rem;
