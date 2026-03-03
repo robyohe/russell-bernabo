@@ -11,6 +11,7 @@
 html, body {
   height: 100%;
   font-family: 'komet', serif;
+  font-weight: 200;
 }
 
 /* ============================================================
@@ -92,24 +93,32 @@ html, body {
   gap: 10px;
 }
 
+/* komet 200 — elegant, thin identity text */
 .name {
+  font-family: 'komet', serif;
+  font-weight: 200;
   font-size: 1.45rem;
-  font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #d2b982;
   text-align: center;
 }
 
+/* pacaembu 600 — weighted descriptor beneath name */
 .subtitle {
-  font-size: 0.68rem;
+  font-family: 'pacaembu', sans-serif;
+  font-weight: 600;
+  font-size: 0.62rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: #7f6e38;
   text-align: center;
 }
 
+/* komet 200 — italic quote on card back */
 .card-back blockquote {
+  font-family: 'komet', serif;
+  font-weight: 200;
   font-size: 0.88rem;
   font-style: italic;
   color: #e8dfc8;
@@ -136,9 +145,11 @@ html, body {
   z-index: 10;
 }
 
+/* pacaembu 600 — nav links need weight to read at small size */
 .bottom-banner a {
-  font-family: 'komet', serif;
-  font-size: 0.78rem;
+  font-family: 'pacaembu', sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #c8b87a;

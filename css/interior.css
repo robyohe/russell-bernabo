@@ -6,6 +6,7 @@ body {
   background-color: #ffffff;
 }
 
+/* pacaembu 600 — solid nav bar, needs weight */
 .interior-header {
   position: fixed;
   top: 0;
@@ -21,8 +22,9 @@ body {
 }
 
 .home-link {
-  font-family: 'komet', serif;
-  font-size: 0.78rem;
+  font-family: 'pacaembu', sans-serif;
+  font-weight: 600;
+  font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #c8b87a;
@@ -47,9 +49,11 @@ body {
   color: #111111;
 }
 
+/* pacaembu 600 — page section heading */
 .interior-content h1 {
+  font-family: 'pacaembu', sans-serif;
+  font-weight: 600;
   font-size: 1rem;
-  font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #111111;
@@ -58,14 +62,20 @@ body {
   padding-bottom: 16px;
 }
 
+/* komet 200 — body copy */
 .interior-content .copy p {
+  font-family: 'komet', serif;
+  font-weight: 200;
   font-size: 0.95rem;
   line-height: 1.85;
   margin-bottom: 1.4em;
 }
 
+/* komet 200 — contact info */
 .contact-block {
   margin-top: 40px;
+  font-family: 'komet', serif;
+  font-weight: 200;
   font-size: 0.9rem;
   line-height: 2;
   color: #111111;
@@ -105,7 +115,7 @@ body {
 .item-img-wrap {
   position: relative;
   overflow: hidden;
-  border: 1px solid #6d5a2d;
+  border: 1px solid #dddddd;
 }
 
 .item-img-wrap .img-before,
@@ -130,15 +140,14 @@ body {
   opacity: 1;
 }
 
+/* pacaembu 600 — gallery item labels */
 .item-name {
-  font-size: 0.72rem;
+  font-family: 'pacaembu', sans-serif;
+  font-weight: 600;
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #555555;
   text-align: center;
   margin-top: 8px;
-}
-
-.item-img-wrap {
-  border: 1px solid #dddddd;
 }
