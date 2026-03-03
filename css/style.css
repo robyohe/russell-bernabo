@@ -98,6 +98,7 @@ html, body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #d2b982;
+  text-align: center;
 }
 
 .subtitle {
@@ -105,6 +106,7 @@ html, body {
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: #7f6e38;
+  text-align: center;
 }
 
 .card-back blockquote {
