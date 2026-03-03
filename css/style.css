@@ -10,8 +10,8 @@
 
 html, body {
   height: 100%;
-  font-family: 'komet', serif;
-  font-weight: 200;
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
 }
 
 /* ============================================================
@@ -93,10 +93,10 @@ html, body {
   gap: 10px;
 }
 
-/* komet 200 — elegant, thin identity text */
+/* tonos 300 — elegant identity text */
 .name {
-  font-family: 'komet', serif;
-  font-weight: 200;
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
   font-size: 1.45rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -104,9 +104,9 @@ html, body {
   text-align: center;
 }
 
-/* pacaembu 600 — weighted descriptor beneath name */
+/* tonos 600 — weighted descriptor beneath name */
 .subtitle {
-  font-family: 'pacaembu', sans-serif;
+  font-family: 'tonos', sans-serif;
   font-weight: 600;
   font-size: 0.62rem;
   letter-spacing: 0.28em;
@@ -115,10 +115,10 @@ html, body {
   text-align: center;
 }
 
-/* komet 200 — italic quote on card back */
+/* tonos 300 italic — quote on card back */
 .card-back blockquote {
-  font-family: 'komet', serif;
-  font-weight: 200;
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
   font-size: 0.88rem;
   font-style: italic;
   color: #e8dfc8;
@@ -145,9 +145,9 @@ html, body {
   z-index: 10;
 }
 
-/* pacaembu 600 — nav links need weight to read at small size */
+/* tonos 600 — nav links need weight to read at small size */
 .bottom-banner a {
-  font-family: 'pacaembu', sans-serif;
+  font-family: 'tonos', sans-serif;
   font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.2em;

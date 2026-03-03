@@ -6,7 +6,7 @@ body {
   background-color: #ffffff;
 }
 
-/* pacaembu 600 — solid nav bar, needs weight */
+/* tonos 600 — solid nav bar */
 .interior-header {
   position: fixed;
   top: 0;
@@ -22,7 +22,7 @@ body {
 }
 
 .home-link {
-  font-family: 'pacaembu', sans-serif;
+  font-family: 'tonos', sans-serif;
   font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
@@ -49,9 +49,9 @@ body {
   color: #111111;
 }
 
-/* pacaembu 600 — page section heading */
+/* tonos 600 — page section heading */
 .interior-content h1 {
-  font-family: 'pacaembu', sans-serif;
+  font-family: 'tonos', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.22em;
@@ -62,20 +62,20 @@ body {
   padding-bottom: 16px;
 }
 
-/* komet 200 — body copy */
+/* tonos 300 — body copy */
 .interior-content .copy p {
-  font-family: 'komet', serif;
-  font-weight: 200;
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
   font-size: 0.95rem;
   line-height: 1.85;
   margin-bottom: 1.4em;
 }
 
-/* komet 200 — contact info */
+/* tonos 300 — contact info */
 .contact-block {
   margin-top: 40px;
-  font-family: 'komet', serif;
-  font-weight: 200;
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
   font-size: 0.9rem;
   line-height: 2;
   color: #111111;
@@ -149,9 +149,9 @@ body {
   opacity: 1;
 }
 
-/* pacaembu 600 — gallery item labels */
+/* tonos 600 — gallery item labels */
 .item-name {
-  font-family: 'pacaembu', sans-serif;
+  font-family: 'tonos', sans-serif;
   font-weight: 600;
   font-size: 0.65rem;
   letter-spacing: 0.15em;
