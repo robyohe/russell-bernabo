@@ -21,7 +21,7 @@ body {
 }
 
 .home-link {
-  font-family: 'Georgia', serif;
+  font-family: 'komet', serif;
   font-size: 0.78rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -173,7 +173,7 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-  font-family: 'Georgia', serif;
+  font-family: 'komet', serif;
   font-size: 0.62rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
