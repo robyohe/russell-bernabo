@@ -2,6 +2,10 @@
    INTERIOR PAGES (shared by all non-landing pages)
    ============================================================ */
 
+body {
+  background-color: #1c1710;
+}
+
 .interior-header {
   position: fixed;
   top: 0;
