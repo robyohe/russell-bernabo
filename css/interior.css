@@ -94,13 +94,20 @@ body {
 }
 
 /* ============================================================
-   GALLERY GRID
+   GALLERY — CSS columns masonry (natural aspect ratios, no crop)
    ============================================================ */
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 28px;
+  columns: 3;
+  column-gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .gallery { columns: 2; }
+}
+
+@media (max-width: 520px) {
+  .gallery { columns: 1; }
 }
 
 /* ============================================================
@@ -108,6 +115,8 @@ body {
    ============================================================ */
 
 .gallery-item {
+  break-inside: avoid;
+  margin-bottom: 28px;
   cursor: pointer;
   user-select: none;
 }
@@ -116,22 +125,19 @@ body {
   position: relative;
   overflow: hidden;
   border: 1px solid #dddddd;
-  /* Force uniform 4:3 cells — all images fill and crop to this ratio */
-  aspect-ratio: 4 / 3;
 }
 
 .item-img-wrap .img-before,
 .item-img-wrap .img-after {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   display: block;
   transition: opacity 0.45s ease;
 }
 
 .item-img-wrap .img-after {
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
 }
 
