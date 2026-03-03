@@ -78,8 +78,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(210, 185, 130, 0.45);
-  background: rgba(20, 16, 10, 0.72);
+  border: 1px solid #6d5a2d;
+  background: #14100a;
   padding: 24px 32px;
 }
 
@@ -104,7 +104,7 @@ html, body {
   font-size: 0.68rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(210, 185, 130, 0.55);
+  color: #7f6e38;
 }
 
 .card-back blockquote {
@@ -129,8 +129,8 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 48px;
-  background: rgba(20, 16, 10, 0.82);
-  border-top: 1px solid rgba(210, 185, 130, 0.3);
+  background: #14100a;
+  border-top: 1px solid #453a1e;
   z-index: 10;
 }
 

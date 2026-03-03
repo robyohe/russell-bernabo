@@ -11,8 +11,8 @@
   display: flex;
   align-items: center;
   padding: 0 32px;
-  background: rgba(20, 16, 10, 0.82);
-  border-bottom: 1px solid rgba(210, 185, 130, 0.3);
+  background: #14100a;
+  border-bottom: 1px solid #453a1e;
   z-index: 10;
 }
 
@@ -44,7 +44,7 @@
   text-transform: uppercase;
   color: #d2b982;
   margin-bottom: 40px;
-  border-bottom: 1px solid rgba(210, 185, 130, 0.25);
+  border-bottom: 1px solid #3b3219;
   padding-bottom: 16px;
 }
 
@@ -64,13 +64,13 @@
 .contact-block a {
   color: #c8b87a;
   text-decoration: none;
-  border-bottom: 1px solid rgba(200, 184, 122, 0.4);
+  border-bottom: 1px solid #514a30;
   transition: color 0.2s, border-color 0.2s;
 }
 
 .contact-block a:hover {
   color: #f0e4bb;
-  border-color: rgba(240, 228, 187, 0.6);
+  border-color: #8f896b;
 }
 
 /* ============================================================
@@ -109,7 +109,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(200, 184, 122, 0.65);
+  color: #82764e;
   text-align: center;
   margin-top: 4px;
 }
@@ -117,13 +117,74 @@
 .pair-label {
   font-size: 0.78rem;
   letter-spacing: 0.1em;
-  color: rgba(232, 223, 200, 0.5);
+  color: #746f64;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
 .placeholder {
-  color: rgba(200, 184, 122, 0.4);
+  color: #514a30;
   font-style: italic;
   font-size: 0.88rem;
+}
+
+/* ============================================================
+   GALLERY HINT
+   ============================================================ */
+
+.gallery-hint {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #746f64;
+  margin-bottom: 36px;
+  margin-top: -24px;
+}
+
+/* ============================================================
+   GALLERY ITEM (click-to-toggle before / after)
+   ============================================================ */
+
+.gallery-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+.item-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-img-wrap img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item:active .item-img-wrap img {
+  opacity: 0.75;
+}
+
+.item-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: 'Georgia', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d2b982;
+  background: #14100a;
+  padding: 3px 9px;
+  border: 1px solid #453a1e;
+  pointer-events: none;
+}
+
+.item-name {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #82764e;
+  text-align: center;
+  margin-top: 8px;
 }
