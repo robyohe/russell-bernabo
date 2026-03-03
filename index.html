@@ -187,38 +187,49 @@
 
   <script>
     (function () {
-      var items   = Array.from(document.querySelectorAll('.ooi-item'));
+      var pool    = Array.from(document.querySelectorAll('.ooi-item'));
       var landing = document.querySelector('.landing');
 
-      /* Two elliptical rings so items fit a typical 1440×900 viewport.
-         rx = horizontal half-axis, ry = vertical half-axis.
-         Ring 2 is offset by half a segment to stagger with ring 1.      */
+      /* Fisher-Yates shuffle, then draw 8 */
+      function shuffle(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+        }
+        return arr;
+      }
+
+      shuffle(pool);
+      var visible = pool.slice(0, 8);
+      var hidden  = pool.slice(8);
+
+      /* Hide the unchosen items */
+      hidden.forEach(function (it) { it.style.display = 'none'; });
+
+      /* Two rings of 4 — inner and outer, outer offset by 45° to stagger */
       var rings = [
-        { rx: 330, ry: 235, n: 7 },
-        { rx: 530, ry: 310, n: 8 }
+        { rx: 300, ry: 215, n: 4 },
+        { rx: 510, ry: 300, n: 4, offset: Math.PI / 4 }
       ];
 
       function layout() {
-        var cx = landing.offsetWidth  / 2;
-        var cy = landing.offsetHeight / 2;
+        var cx  = landing.offsetWidth  / 2;
+        var cy  = landing.offsetHeight / 2;
         var idx = 0;
 
-        rings.forEach(function (ring, ri) {
+        rings.forEach(function (ring) {
+          var off = ring.offset || 0;
           for (var j = 0; j < ring.n; j++, idx++) {
-            if (idx >= items.length) return;
-            var angle = (j / ring.n) * 2 * Math.PI
-                      - Math.PI / 2
-                      + (ri === 1 ? Math.PI / ring.n : 0); /* stagger ring 2 */
+            var angle = (j / ring.n) * 2 * Math.PI - Math.PI / 2 + off;
             var x = cx + ring.rx * Math.cos(angle);
             var y = cy + ring.ry * Math.sin(angle);
-            items[idx].style.left      = x + 'px';
-            items[idx].style.top       = y + 'px';
-            items[idx].style.transform = 'translate(-50%, -50%)';
+            visible[idx].style.left      = x + 'px';
+            visible[idx].style.top       = y + 'px';
+            visible[idx].style.transform = 'translate(-50%, -50%)';
           }
         });
       }
 
-      /* Run after images load so offsetWidth/Height are accurate */
       if (document.readyState === 'complete') {
         layout();
       } else {
@@ -226,18 +237,18 @@
       }
       window.addEventListener('resize', layout);
 
-      /* Click to toggle info panel; click outside closes all */
-      items.forEach(function (item) {
+      /* Click to toggle info; click outside closes */
+      visible.forEach(function (item) {
         item.addEventListener('click', function (e) {
           var wasOpen = item.classList.contains('is-open');
-          items.forEach(function (it) { it.classList.remove('is-open'); });
+          visible.forEach(function (it) { it.classList.remove('is-open'); });
           if (!wasOpen) item.classList.add('is-open');
           e.stopPropagation();
         });
       });
 
       document.addEventListener('click', function () {
-        items.forEach(function (it) { it.classList.remove('is-open'); });
+        visible.forEach(function (it) { it.classList.remove('is-open'); });
       });
     })();
   </script>
