@@ -10,7 +10,7 @@
 
 html, body {
   height: 100%;
-  font-family: 'Georgia', serif;
+  font-family: 'komet', serif;
 }
 
 /* ============================================================
@@ -135,7 +135,7 @@ html, body {
 }
 
 .bottom-banner a {
-  font-family: 'Georgia', serif;
+  font-family: 'komet', serif;
   font-size: 0.78rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
