@@ -1,4 +1,20 @@
 /* ============================================================
+   COLOR PALETTE — edit here to retheme the entire site
+   ============================================================ */
+
+:root {
+  --clr-bg:           #000000;  /* page / stage background        */
+  --clr-surface:      #000000;  /* card / banner fill              */
+  --clr-border:       #6d5a2d;  /* primary gold border             */
+  --clr-border-soft:  #453a1e;  /* softer gold border              */
+  --clr-gold:         #d2b982;  /* primary gold text               */
+  --clr-gold-nav:     #c8b87a;  /* nav links / secondary gold      */
+  --clr-gold-sub:     #7f6e38;  /* subtitle / dim gold             */
+  --clr-gold-hover:   #f0e4bb;  /* hover state                     */
+  --clr-text-warm:    #e8dfc8;  /* warm light body text on dark    */
+}
+
+/* ============================================================
    BASE
    ============================================================ */
 
@@ -9,18 +25,19 @@
 }
 
 html {
-  overflow-y: scroll; /* always show scrollbar — prevents fixed elements shifting when content changes */
+  overflow-y: scroll; /* always show scrollbar — prevents fixed elements shifting */
 }
 
 body {
   min-height: 100%;
   font-family: 'tonos', sans-serif;
   font-weight: 300;
+  background-color: var(--clr-bg);
 }
 
 /* ============================================================
    FIXED BACKGROUND
-   Drop artwork into images/bg.jpg — it will show immediately.
+   Drop artwork into images/bg.jpg — it shows immediately.
    ============================================================ */
 
 .bg {
@@ -30,12 +47,11 @@ body {
   background-image: url('../images/bg.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-color: #1a1612;
+  background-color: var(--clr-bg);
 }
 
 /* ============================================================
-   LANDING — fixed full-screen stage; card centered; OOI items
-   placed absolutely by JS inside this container
+   LANDING — fixed full-screen stage
    ============================================================ */
 
 .landing {
@@ -52,19 +68,24 @@ body {
    OOI ITEMS
    ============================================================ */
 
+/* Hidden until JS positions them — prevents flash at center */
 .ooi-item {
   position: absolute;
   cursor: pointer;
   z-index: 5;
-  /* top/left set by JS; centered on computed point via transform */
+  visibility: hidden; /* JS sets visible after layout */
 }
 
+/* Image state: white card, gold border */
 .ooi-card {
   background: #ffffff;
   padding: 12px;
+  border: 1px solid var(--clr-border);
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
 }
 
 .ooi-card img {
@@ -75,17 +96,28 @@ body {
   height: auto;
 }
 
+/* Text state: dark surface, image hidden */
+.ooi-item.is-open .ooi-card {
+  background: var(--clr-surface);
+}
+
+.ooi-item.is-open .ooi-card img {
+  display: none;
+}
+
 .ooi-info {
   display: none;
   text-align: center;
-  padding-top: 8px;
+  min-width: 90px;
+  min-height: 60px;
+  justify-content: center;
 }
 
 .ooi-item.is-open .ooi-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
 .ooi-title {
@@ -94,14 +126,14 @@ body {
   font-size: 0.6rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--clr-gold);
 }
 
 .ooi-rule {
   font-family: 'tonos', sans-serif;
   font-weight: 300;
   font-size: 0.75rem;
-  color: #888888;
+  color: var(--clr-gold-sub);
   letter-spacing: 0.05em;
 }
 
@@ -115,6 +147,8 @@ body {
   height: 180px;
   display: block;
   text-decoration: none;
+  z-index: 6; /* above OOI items */
+  position: relative;
 }
 
 .card {
@@ -126,7 +160,6 @@ body {
   cursor: pointer;
 }
 
-/* Flip on hover; click navigates to About/Contact */
 .card-wrap:hover .card,
 .card-wrap:focus .card {
   transform: rotateY(180deg);
@@ -141,8 +174,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #6d5a2d;
-  background: #14100a;
+  border: 1px solid var(--clr-border);
+  background: var(--clr-surface);
   padding: 24px 32px;
 }
 
@@ -155,35 +188,32 @@ body {
   gap: 10px;
 }
 
-/* tonos 300 — elegant identity text */
 .name {
   font-family: 'tonos', sans-serif;
   font-weight: 300;
   font-size: 1.45rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #d2b982;
+  color: var(--clr-gold);
   text-align: center;
 }
 
-/* tonos 600 — weighted descriptor beneath name */
 .subtitle {
   font-family: 'tonos', sans-serif;
   font-weight: 600;
   font-size: 0.62rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #7f6e38;
+  color: var(--clr-gold-sub);
   text-align: center;
 }
 
-/* tonos 300 italic — quote on card back */
 .card-back blockquote {
   font-family: 'tonos', sans-serif;
   font-weight: 300;
   font-size: 0.88rem;
   font-style: italic;
-  color: #e8dfc8;
+  color: var(--clr-text-warm);
   line-height: 1.7;
   text-align: center;
 }
@@ -202,23 +232,22 @@ body {
   align-items: center;
   justify-content: center;
   gap: 48px;
-  background: #14100a;
-  border-top: 1px solid #453a1e;
+  background: var(--clr-surface);
+  border-top: 1px solid var(--clr-border-soft);
   z-index: 10;
 }
 
-/* tonos 600 — nav links need weight to read at small size */
 .bottom-banner a {
   font-family: 'tonos', sans-serif;
   font-weight: 600;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #c8b87a;
+  color: var(--clr-gold-nav);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .bottom-banner a:hover {
-  color: #f0e4bb;
+  color: var(--clr-gold-hover);
 }
