@@ -1,0 +1,152 @@
+/* ============================================================
+   BASE
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Georgia', serif;
+}
+
+/* ============================================================
+   FIXED BACKGROUND
+   Drop artwork into images/bg.jpg — it will show immediately.
+   ============================================================ */
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* Placeholder color while image is absent */
+  background-color: #1a1612;
+}
+
+/* ============================================================
+   LANDING
+   ============================================================ */
+
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-bottom: 60px; /* clear the bottom banner */
+}
+
+/* ============================================================
+   FLIP CARD
+   ============================================================ */
+
+.card-wrap {
+  perspective: 1000px;
+  width: 320px;
+  height: 180px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  cursor: pointer;
+}
+
+/* Flip on hover or keyboard focus */
+.card-wrap:hover .card,
+.card:focus .card {
+  transform: rotateY(180deg);
+}
+
+/* Also flip when .flipped class is toggled (click on touch devices) */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(210, 185, 130, 0.45);
+  background: rgba(20, 16, 10, 0.72);
+  padding: 24px 32px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name {
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d2b982;
+}
+
+.subtitle {
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(210, 185, 130, 0.55);
+}
+
+.card-back blockquote {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #e8dfc8;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ============================================================
+   BOTTOM BANNER
+   ============================================================ */
+
+.bottom-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  background: rgba(20, 16, 10, 0.82);
+  border-top: 1px solid rgba(210, 185, 130, 0.3);
+  z-index: 10;
+}
+
+.bottom-banner a {
+  font-family: 'Georgia', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c8b87a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bottom-banner a:hover {
+  color: #f0e4bb;
+}

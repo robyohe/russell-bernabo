@@ -1,0 +1,129 @@
+/* ============================================================
+   INTERIOR PAGES (shared by all non-landing pages)
+   ============================================================ */
+
+.interior-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  background: rgba(20, 16, 10, 0.82);
+  border-bottom: 1px solid rgba(210, 185, 130, 0.3);
+  z-index: 10;
+}
+
+.home-link {
+  font-family: 'Georgia', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c8b87a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.home-link:hover {
+  color: #f0e4bb;
+}
+
+.interior-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 90px 32px 80px;
+  color: #e8dfc8;
+}
+
+.interior-content h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d2b982;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(210, 185, 130, 0.25);
+  padding-bottom: 16px;
+}
+
+.interior-content .copy p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 1.4em;
+}
+
+.contact-block {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  line-height: 2;
+  color: #c8b87a;
+}
+
+.contact-block a {
+  color: #c8b87a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200, 184, 122, 0.4);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-block a:hover {
+  color: #f0e4bb;
+  border-color: rgba(240, 228, 187, 0.6);
+}
+
+/* ============================================================
+   GALLERY (before/after pairs)
+   ============================================================ */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 40px;
+}
+
+.gallery-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gallery-pair figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-pair figure img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-pair figure:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-pair figcaption {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(200, 184, 122, 0.65);
+  text-align: center;
+  margin-top: 4px;
+}
+
+.pair-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: rgba(232, 223, 200, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.placeholder {
+  color: rgba(200, 184, 122, 0.4);
+  font-style: italic;
+  font-size: 0.88rem;
+}

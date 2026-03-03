@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Russell Bernabo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <main class="landing">
+
+    <div class="card-wrap">
+      <div class="card" tabindex="0">
+        <div class="card-front">
+          <span class="name">Russell Bernabo</span>
+          <span class="subtitle">Object Conservation</span>
+        </div>
+        <div class="card-back">
+          <blockquote>
+            "Quote goes here."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <nav class="bottom-banner">
+    <a href="gilded-surfaces/index.html">Gilded Surfaces</a>
+    <a href="other-projects/index.html">Other Projects</a>
+    <a href="about/index.html">About / Contact</a>
+  </nav>
+
+  <script>
+    // Toggle flip on click (for touch devices that don't have hover)
+    document.querySelector('.card').addEventListener('click', function() {
+      this.classList.toggle('flipped');
+    });
+  </script>
+
+</body>
+</html>
