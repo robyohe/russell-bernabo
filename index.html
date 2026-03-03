@@ -27,6 +27,156 @@
       </div>
     </a>
 
+    <div class="ooi-item" data-title="Grandma">
+      <div class="ooi-card">
+        <img src="images/ooi/grandma.png" alt="Grandma">
+        <div class="ooi-info">
+          <span class="ooi-title">Grandma</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Grandpa">
+      <div class="ooi-card">
+        <img src="images/ooi/grandpa.png" alt="Grandpa">
+        <div class="ooi-info">
+          <span class="ooi-title">Grandpa</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Blue Door">
+      <div class="ooi-card">
+        <img src="images/ooi/blue-door.png" alt="Blue Door">
+        <div class="ooi-info">
+          <span class="ooi-title">Blue Door</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Classical Fragment">
+      <div class="ooi-card">
+        <img src="images/ooi/classical-frag.png" alt="Classical Fragment">
+        <div class="ooi-info">
+          <span class="ooi-title">Classical Fragment</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Dali">
+      <div class="ooi-card">
+        <img src="images/ooi/dali.png" alt="Dali">
+        <div class="ooi-info">
+          <span class="ooi-title">Dali</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Frishmuth">
+      <div class="ooi-card">
+        <img src="images/ooi/frishmuth.png" alt="Frishmuth">
+        <div class="ooi-info">
+          <span class="ooi-title">Frishmuth</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Jeff Davis">
+      <div class="ooi-card">
+        <img src="images/ooi/jeff-davis.png" alt="Jeff Davis">
+        <div class="ooi-info">
+          <span class="ooi-title">Jeff Davis</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Jug &amp; Stand">
+      <div class="ooi-card">
+        <img src="images/ooi/jug-stand.png" alt="Jug and Stand">
+        <div class="ooi-info">
+          <span class="ooi-title">Jug &amp; Stand</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Postage Scale">
+      <div class="ooi-card">
+        <img src="images/ooi/postage-scale.png" alt="Postage Scale">
+        <div class="ooi-info">
+          <span class="ooi-title">Postage Scale</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Santaria Charms">
+      <div class="ooi-card">
+        <img src="images/ooi/santaria-charms.png" alt="Santaria Charms">
+        <div class="ooi-info">
+          <span class="ooi-title">Santaria Charms</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Sill Heads">
+      <div class="ooi-card">
+        <img src="images/ooi/sill-heads.png" alt="Sill Heads">
+        <div class="ooi-info">
+          <span class="ooi-title">Sill Heads</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="St. Bartholomew">
+      <div class="ooi-card">
+        <img src="images/ooi/st-bartholomew.png" alt="St. Bartholomew">
+        <div class="ooi-info">
+          <span class="ooi-title">St. Bartholomew</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Bach Lamp">
+      <div class="ooi-card">
+        <img src="images/ooi/bach-lamp.png" alt="Bach Lamp">
+        <div class="ooi-info">
+          <span class="ooi-title">Bach Lamp</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Gronborg Plate">
+      <div class="ooi-card">
+        <img src="images/ooi/gronborg-plate.png" alt="Gronborg Plate">
+        <div class="ooi-info">
+          <span class="ooi-title">Gronborg Plate</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ooi-item" data-title="Conservator's Bio">
+      <div class="ooi-card">
+        <img src="images/ooi/conservators-bio.png" alt="Conservator's Bio">
+        <div class="ooi-info">
+          <span class="ooi-title">Conservator's Bio</span>
+          <span class="ooi-rule">_________</span>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <nav class="bottom-banner">
@@ -35,7 +185,62 @@
     <a href="about/index.html">About / Contact</a>
   </nav>
 
-  <!-- Card flips on hover via CSS; click navigates to About/Contact -->
+  <script>
+    (function () {
+      var items   = Array.from(document.querySelectorAll('.ooi-item'));
+      var landing = document.querySelector('.landing');
+
+      /* Two elliptical rings so items fit a typical 1440×900 viewport.
+         rx = horizontal half-axis, ry = vertical half-axis.
+         Ring 2 is offset by half a segment to stagger with ring 1.      */
+      var rings = [
+        { rx: 330, ry: 235, n: 7 },
+        { rx: 530, ry: 310, n: 8 }
+      ];
+
+      function layout() {
+        var cx = landing.offsetWidth  / 2;
+        var cy = landing.offsetHeight / 2;
+        var idx = 0;
+
+        rings.forEach(function (ring, ri) {
+          for (var j = 0; j < ring.n; j++, idx++) {
+            if (idx >= items.length) return;
+            var angle = (j / ring.n) * 2 * Math.PI
+                      - Math.PI / 2
+                      + (ri === 1 ? Math.PI / ring.n : 0); /* stagger ring 2 */
+            var x = cx + ring.rx * Math.cos(angle);
+            var y = cy + ring.ry * Math.sin(angle);
+            items[idx].style.left      = x + 'px';
+            items[idx].style.top       = y + 'px';
+            items[idx].style.transform = 'translate(-50%, -50%)';
+          }
+        });
+      }
+
+      /* Run after images load so offsetWidth/Height are accurate */
+      if (document.readyState === 'complete') {
+        layout();
+      } else {
+        window.addEventListener('load', layout);
+      }
+      window.addEventListener('resize', layout);
+
+      /* Click to toggle info panel; click outside closes all */
+      items.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          var wasOpen = item.classList.contains('is-open');
+          items.forEach(function (it) { it.classList.remove('is-open'); });
+          if (!wasOpen) item.classList.add('is-open');
+          e.stopPropagation();
+        });
+      });
+
+      document.addEventListener('click', function () {
+        items.forEach(function (it) { it.classList.remove('is-open'); });
+      });
+    })();
+  </script>
 
 </body>
 </html>

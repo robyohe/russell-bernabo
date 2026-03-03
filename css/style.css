@@ -34,15 +34,75 @@ body {
 }
 
 /* ============================================================
-   LANDING
+   LANDING — fixed full-screen stage; card centered; OOI items
+   placed absolutely by JS inside this container
    ============================================================ */
 
 .landing {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding-bottom: 60px; /* clear the bottom banner */
+  padding-bottom: 50px; /* shift center up to clear bottom banner */
+}
+
+/* ============================================================
+   OOI ITEMS
+   ============================================================ */
+
+.ooi-item {
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+  /* top/left set by JS; centered on computed point via transform */
+}
+
+.ooi-card {
+  background: #ffffff;
+  padding: 12px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ooi-card img {
+  display: block;
+  max-width: 120px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+}
+
+.ooi-info {
+  display: none;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.ooi-item.is-open .ooi-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.ooi-title {
+  font-family: 'tonos', sans-serif;
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.ooi-rule {
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: #888888;
+  letter-spacing: 0.05em;
 }
 
 /* ============================================================
