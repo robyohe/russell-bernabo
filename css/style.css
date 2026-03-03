@@ -8,8 +8,12 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
+html {
+  overflow-y: scroll; /* always show scrollbar — prevents fixed elements shifting when content changes */
+}
+
+body {
+  min-height: 100%;
   font-family: 'tonos', sans-serif;
   font-weight: 300;
 }

@@ -36,11 +36,6 @@ body {
   color: #f0e4bb;
 }
 
-/* Override the bottom banner background on interior pages */
-.bottom-banner {
-  background: #14100a;
-  border-top: 1px solid #453a1e;
-}
 
 .interior-content {
   max-width: 1400px;
