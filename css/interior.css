@@ -143,13 +143,13 @@ body {
 }
 
 /* ============================================================
-   GALLERY ITEM (click to toggle before / after)
+   GALLERY ITEM (hover to reveal after)
    ============================================================ */
 
 .gallery-item {
   break-inside: avoid;
   margin-bottom: 28px;
-  cursor: pointer;
+  cursor: default;
   user-select: none;
 }
 
@@ -173,11 +173,11 @@ body {
   opacity: 0;
 }
 
-.gallery-item.is-after .img-before {
+.gallery-item:hover .img-before {
   opacity: 0;
 }
 
-.gallery-item.is-after .img-after {
+.gallery-item:hover .img-after {
   opacity: 1;
 }
 

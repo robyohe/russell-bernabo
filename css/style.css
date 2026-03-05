@@ -45,7 +45,8 @@ body {
   inset: 0;
   z-index: -1;
   background-image: url('../images/bg.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: right bottom; /* anchors signature corner; uniform scale */
   background-repeat: no-repeat;
   background-color: var(--clr-bg);
 }
@@ -250,4 +251,57 @@ body {
 
 .bottom-banner a:hover {
   color: var(--clr-gold-hover);
+}
+
+/* ============================================================
+   SIGNATURE ZONE & PAINTING INFO POPUP
+   Invisible hover target over the painting's signature.
+   ============================================================ */
+
+.signature-zone {
+  position: fixed;
+  bottom: 58px; /* clears the 50px bottom-banner */
+  right: 24px;
+  width: 90px;
+  height: 56px;
+  z-index: 5;
+  cursor: default;
+}
+
+.painting-info-card {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  right: 0;
+  width: 260px;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  padding: 18px 22px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: translateY(6px);
+}
+
+.signature-zone:hover .painting-info-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.painting-info-title {
+  font-family: 'tonos', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: 10px;
+}
+
+.painting-info-meta {
+  font-family: 'tonos', sans-serif;
+  font-weight: 300;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--clr-gold-sub);
+  line-height: 2;
 }
