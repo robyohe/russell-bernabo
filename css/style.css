@@ -45,8 +45,8 @@ body {
   inset: 0;
   z-index: -1;
   background-image: url('../images/bg.jpg');
-  background-size: contain;
-  background-position: right bottom; /* anchors signature corner; uniform scale */
+  background-size: cover;
+  background-position: right 0px bottom 50px; /* uniform scale; keeps signature above the 50px nav banner */
   background-repeat: no-repeat;
   background-color: var(--clr-bg);
 }
