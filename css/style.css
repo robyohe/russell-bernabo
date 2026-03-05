@@ -42,11 +42,11 @@ body {
 
 .bg {
   position: fixed;
-  inset: 0;
+  inset: 0 0 50px 0; /* stops at top of the 50px bottom banner */
   z-index: -1;
   background-image: url('../images/bg.jpg');
   background-size: cover;
-  background-position: right 0px bottom 50px; /* uniform scale; keeps signature above the 50px nav banner */
+  background-position: right bottom; /* signature anchored to element's bottom-right */
   background-repeat: no-repeat;
   background-color: var(--clr-bg);
 }
