@@ -314,10 +314,11 @@
       var visible = pool.slice(0, 8);
       pool.slice(8).forEach(function (it) { it.style.display = 'none'; });
 
-      /* Compute card half-dimensions from known natural image size */
+      /* Compute card half-dimensions from the loaded image, falling back to data attributes */
       function halfBox(item) {
-        var nw = +item.dataset.imgW || 200;
-        var nh = +item.dataset.imgH || 200;
+        var img = item.querySelector('img');
+        var nw = (img && img.naturalWidth > 0 ? img.naturalWidth : 0) || +item.dataset.imgW || 200;
+        var nh = (img && img.naturalHeight > 0 ? img.naturalHeight : 0) || +item.dataset.imgH || 200;
         var scale = Math.min(MAX_W / nw, MAX_H / nh);
         return {
           hw: (nw * scale + 2 * PAD) / 2 + GAP / 2,
@@ -381,6 +382,19 @@
 
       layout();
       window.addEventListener('resize', layout);
+
+      /* Re-run layout once actual image dimensions are available from the network */
+      var imagesPending = 0;
+      visible.forEach(function (item) {
+        var img = item.querySelector('img');
+        if (!img || img.complete) return;
+        imagesPending++;
+        function done() { if (--imagesPending === 0) layout(); }
+        img.addEventListener('load', done, { once: true });
+        img.addEventListener('error', done, { once: true });
+      });
+      /* If all visible images were already loaded from cache, re-layout with naturalWidth */
+      if (imagesPending === 0) layout();
 
       /* Click: swap to text view; click outside closes */
       visible.forEach(function (item) {
