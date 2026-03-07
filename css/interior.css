@@ -227,7 +227,8 @@ body {
   flex: 1;
   min-width: 0;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  background: #ffffff;
   border: 1px solid #dddddd;
 }
 
