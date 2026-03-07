@@ -220,8 +220,15 @@ body {
 }
 
 .project-images.row-overview {
-  height: 460px;
-  justify-content: flex-start;
+  height: auto;
+  display: block;
+}
+
+.project-images.row-overview .img-solo {
+  width: auto;
+  height: auto;
+  max-height: 520px;
+  max-width: 60%;
 }
 
 .project-images.row-tall {
