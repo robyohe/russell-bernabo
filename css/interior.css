@@ -213,22 +213,15 @@ body {
 .project-images {
   display: flex;
   gap: 10px;
-  align-items: stretch;
-  height: 360px;
+  align-items: flex-start;
   margin-bottom: 10px;
-  overflow: hidden;
-}
-
-.project-images.row-overview {
-  height: 500px;
 }
 
 .project-images .img-solo {
   flex: 1;
   min-width: 0;
+  height: auto;
   display: block;
-  object-fit: contain;
-  background: #ffffff;
   border: 1px solid #dddddd;
 }
 
