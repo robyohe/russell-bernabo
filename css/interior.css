@@ -232,6 +232,10 @@ body {
   height: 560px;
 }
 
+.project-images.row-large .img-solo {
+  height: 560px;
+}
+
 .project-label {
   margin-top: 14px;
 }
