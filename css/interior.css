@@ -212,9 +212,9 @@ body {
 
 .project-images {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 12px;
   align-items: flex-start;
-  margin-bottom: 10px;
 }
 
 .project-images .img-solo {
@@ -223,6 +223,12 @@ body {
   height: auto;
   display: block;
   border: 1px solid #dddddd;
+}
+
+/* Solo images should not stretch full width */
+.project-images .img-solo:only-child {
+  flex: 0 0 auto;
+  max-width: 50%;
 }
 
 .project-label {
