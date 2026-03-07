@@ -264,10 +264,16 @@ body {
 
 @media (max-width: 700px) {
   .project-images {
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
   }
-  .project-images .img-solo,
-  .project-images .gallery-item {
-    flex: 1 1 45%;
+  .project-images .img-solo {
+    height: auto;
+    width: 100%;
+    flex-shrink: 1;
+  }
+  .project-images.row-large .img-solo {
+    height: auto;
   }
 }
