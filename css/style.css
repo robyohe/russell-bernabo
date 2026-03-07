@@ -11,6 +11,7 @@
   --clr-gold-nav:     #c8b87a;  /* nav links / secondary gold      */
   --clr-gold-sub:     #7f6e38;  /* subtitle / dim gold             */
   --clr-gold-hover:   #f0e4bb;  /* hover state                     */
+  --clr-ooi-bg:       #f0e4bb;  /* OOI card background (swap to revert)   */
   --clr-text-warm:    #e8dfc8;  /* warm light body text on dark    */
 }
 
@@ -79,7 +80,7 @@ body {
 
 /* Image state: black card, gold border */
 .ooi-card {
-  background: var(--clr-bg);
+  background: var(--clr-ooi-bg);
   padding: 12px;
   border: 1px solid var(--clr-border);
   display: inline-flex;
