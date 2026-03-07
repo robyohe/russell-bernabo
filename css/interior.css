@@ -213,36 +213,22 @@ body {
 .project-images {
   display: flex;
   gap: 10px;
-  align-items: flex-start;
-  height: 340px;
+  align-items: stretch;
+  height: 360px;
   margin-bottom: 10px;
   overflow: hidden;
 }
 
 .project-images.row-overview {
-  height: auto;
-  display: block;
-}
-
-.project-images.row-overview .img-solo {
-  width: auto;
-  height: auto;
-  max-height: 520px;
-  max-width: 60%;
-}
-
-.project-images.row-tall {
-  height: 420px;
+  height: 500px;
 }
 
 .project-images .img-solo {
-  height: 100%;
-  width: auto;
+  flex: 1;
+  min-width: 0;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   border: 1px solid #dddddd;
-  background: #f9f9f9;
-  flex-shrink: 0;
 }
 
 .project-label {
