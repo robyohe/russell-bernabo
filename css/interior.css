@@ -228,6 +228,10 @@ body {
   flex-shrink: 0;
 }
 
+.project-images.row-large {
+  height: 480px;
+}
+
 .project-label {
   margin-top: 14px;
 }
