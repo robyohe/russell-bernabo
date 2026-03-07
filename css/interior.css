@@ -236,13 +236,7 @@ body {
 }
 
 .label-title {
-  font-family: 'tonos', sans-serif;
-  font-weight: 600;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #111111;
-  margin: 0 0 5px;
+  display: none;
 }
 
 .label-id {

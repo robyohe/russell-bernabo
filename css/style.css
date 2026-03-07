@@ -122,12 +122,7 @@ body {
 }
 
 .ooi-title {
-  font-family: 'tonos', sans-serif;
-  font-weight: 600;
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--clr-gold);
+  display: none;
 }
 
 .ooi-rule {
