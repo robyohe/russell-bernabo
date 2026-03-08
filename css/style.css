@@ -326,3 +326,17 @@ body {
     padding: 0 4px;
   }
 }
+
+/* ============================================================
+   TOUCH DEVICES — disable card flip, tap goes straight to link
+   ============================================================ */
+
+@media (hover: none) {
+  .card {
+    transition: none;
+  }
+  .card-wrap:hover .card,
+  .card-wrap:focus .card {
+    transform: none;
+  }
+}
