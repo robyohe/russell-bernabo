@@ -237,16 +237,13 @@ body {
 }
 
 .project-images.row-large .img-solo {
-  height: 560px;
-}
-
-/* Last image fills remaining width so the row aligns with rows below */
-.project-images.row-large .img-solo:last-child {
+  /* All images share space equally and scale together */
   flex: 1;
-  min-width: 0;
   width: 0;
+  min-width: 0;
+  height: 560px;
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
 }
 
 .project-label {
@@ -310,11 +307,15 @@ body {
     flex-shrink: 1;
   }
   .project-images.row-large .img-solo {
-    height: auto;
-  }
-  .project-images.row-large .img-solo:last-child {
     flex: initial;
     width: 100%;
+    height: auto;
+    object-fit: initial;
+  }
+  /* img-separated: vertical gap on mobile instead of horizontal indent */
+  .img-separated {
+    margin-left: 0;
+    margin-top: 40px;
   }
 }
 
