@@ -303,8 +303,9 @@
       var landing = document.querySelector('.landing');
 
       var PAD = 12, MAX_W = 120, MAX_H = 140, GAP = 20;
+      var M_PAD = 10, M_MAX_W = 80, M_MAX_H = 100;
 
-      /* Fisher-Yates shuffle, draw 8 */
+      /* Fisher-Yates shuffle */
       function shuffle(arr) {
         for (var i = arr.length - 1; i > 0; i--) {
           var j = Math.floor(Math.random() * (i + 1));
@@ -312,25 +313,31 @@
         }
       }
       shuffle(pool);
-      var visible = pool.slice(0, 8);
-      pool.slice(8).forEach(function (it) { it.style.display = 'none'; });
 
-      /* Compute card half-dimensions from the loaded image, falling back to data attributes */
+      var isMobile = window.innerWidth < 700;
+      var count    = isMobile ? 5 : 8;
+      var visible  = pool.slice(0, count);
+      pool.slice(count).forEach(function (it) { it.style.display = 'none'; });
+
       function halfBox(item) {
         var img = item.querySelector('img');
-        var nw = (img && img.naturalWidth > 0 ? img.naturalWidth : 0) || +item.dataset.imgW || 200;
-        var nh = (img && img.naturalHeight > 0 ? img.naturalHeight : 0) || +item.dataset.imgH || 200;
-        var scale = Math.min(MAX_W / nw, MAX_H / nh);
+        var mw  = isMobile ? M_MAX_W : MAX_W;
+        var mh  = isMobile ? M_MAX_H : MAX_H;
+        var pd  = isMobile ? M_PAD   : PAD;
+        var nw  = (img && img.naturalWidth > 0 ? img.naturalWidth : 0) || +item.dataset.imgW || 200;
+        var nh  = (img && img.naturalHeight > 0 ? img.naturalHeight : 0) || +item.dataset.imgH || 200;
+        var scale = Math.min(mw / nw, mh / nh);
         return {
-          hw: (nw * scale + 2 * PAD) / 2 + GAP / 2,
-          hh: (nh * scale + 2 * PAD) / 2 + GAP / 2
+          hw: (nw * scale + 2 * pd) / 2 + GAP / 2,
+          hh: (nh * scale + 2 * pd) / 2 + GAP / 2
         };
       }
 
-      /* Ring rotation fixed once per session so resize doesn't re-spin */
+      /* Ring rotation fixed once per session */
       var rot = Math.random() * 2 * Math.PI;
 
-      function layout() {
+      /* ── DESKTOP: ring + force-push (original) ── */
+      function layoutDesktop() {
         var W  = landing.offsetWidth;
         var H  = landing.offsetHeight;
         var cx = W / 2;
@@ -338,20 +345,12 @@
         var rx = Math.min(430, W / 2 - 140);
         var ry = Math.min(290, (H - 50) / 2 - 110);
 
-        /* Place items on a single ring */
         var boxes = visible.map(function (item, j) {
           var angle = (j / visible.length) * 2 * Math.PI + rot;
           var hb    = halfBox(item);
-          return {
-            x:  cx + rx * Math.cos(angle),
-            y:  cy + ry * Math.sin(angle),
-            hw: hb.hw,
-            hh: hb.hh,
-            el: item
-          };
+          return { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle), hw: hb.hw, hh: hb.hh, el: item };
         });
 
-        /* Force-based collision resolution — push overlapping pairs apart */
         for (var iter = 0; iter < 120; iter++) {
           var moved = false;
           for (var i = 0; i < boxes.length; i++) {
@@ -372,32 +371,67 @@
           if (!moved) break;
         }
 
-        /* Apply positions and reveal */
         boxes.forEach(function (box) {
-          box.el.style.left       = box.x + 'px';
-          box.el.style.top        = box.y + 'px';
-          box.el.style.transform  = 'translate(-50%, -50%)';
-          box.el.style.visibility = 'visible';
+          box.el.style.left        = box.x + 'px';
+          box.el.style.top         = box.y + 'px';
+          box.el.style.transform   = 'translate(-50%, -50%)';
+          box.el.style.visibility  = 'visible';
         });
+      }
+
+      /* ── MOBILE: 2 above card, 3 below card ── */
+      function layoutMobile() {
+        var W      = landing.offsetWidth;
+        var H      = landing.offsetHeight;
+        var cardCY = (H - 50) / 2;   /* card visual centre (flexbox + padding-bottom:50) */
+        var gap    = 108;             /* card half-height 90 + 18px breathing room */
+        var margin = 14;
+
+        var topZone    = { yMin: margin,          yMax: cardCY - gap };
+        var bottomZone = { yMin: cardCY + gap,     yMax: H - 50 - margin };
+
+        var groups = [
+          { zone: topZone,    items: [visible[0], visible[1]] },
+          { zone: bottomZone, items: [visible[2], visible[3], visible[4]] }
+        ];
+
+        groups.forEach(function (g) {
+          var n      = g.items.length;
+          var zoneH  = g.zone.yMax - g.zone.yMin;
+          var zoneCY = g.zone.yMin + zoneH / 2;
+          var jitter = zoneH * 0.22;
+
+          g.items.forEach(function (item, i) {
+            var x = (i + 1) * W / (n + 1);
+            var y = zoneCY + (Math.random() - 0.5) * jitter;
+            item.style.left       = x + 'px';
+            item.style.top        = y + 'px';
+            item.style.transform  = 'translate(-50%, -50%)';
+            item.style.visibility = 'visible';
+          });
+        });
+      }
+
+      function layout() {
+        isMobile ? layoutMobile() : layoutDesktop();
       }
 
       layout();
       window.addEventListener('resize', layout);
 
-      /* Re-run layout once actual image dimensions are available from the network */
+      /* Re-layout once images load */
       var imagesPending = 0;
       visible.forEach(function (item) {
         var img = item.querySelector('img');
         if (!img || img.complete) return;
         imagesPending++;
         function done() { if (--imagesPending === 0) layout(); }
-        img.addEventListener('load', done, { once: true });
+        img.addEventListener('load',  done, { once: true });
         img.addEventListener('error', done, { once: true });
       });
-      /* If all visible images were already loaded from cache, re-layout with naturalWidth */
       if (imagesPending === 0) layout();
 
-      /* Click: swap to text view; click outside closes */
+      /* Click: open/close info */
       visible.forEach(function (item) {
         item.addEventListener('click', function (e) {
           var wasOpen = item.classList.contains('is-open');

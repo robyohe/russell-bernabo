@@ -325,6 +325,15 @@ body {
     letter-spacing: 0.1em;
     padding: 0 4px;
   }
+
+  /* Smaller OOI cards on mobile to match JS layout calculations */
+  .ooi-card {
+    padding: 8px;
+  }
+  .ooi-card img {
+    max-width: 80px;
+    max-height: 100px;
+  }
 }
 
 /* ============================================================
