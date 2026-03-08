@@ -303,7 +303,7 @@
       var landing = document.querySelector('.landing');
 
       var PAD = 12, MAX_W = 120, MAX_H = 140, GAP = 20;
-      var M_PAD = 10, M_MAX_W = 80, M_MAX_H = 100;
+      var M_PAD = 6, M_MAX_W = 72, M_MAX_H = 92;
 
       /* Fisher-Yates shuffle */
       function shuffle(arr) {
@@ -399,7 +399,7 @@
           var n      = g.items.length;
           var zoneH  = g.zone.yMax - g.zone.yMin;
           var zoneCY = g.zone.yMin + zoneH / 2;
-          var jitter = zoneH * 0.22;
+          var jitter = zoneH * 0.08;
 
           g.items.forEach(function (item, i) {
             var x = (i + 1) * W / (n + 1);
