@@ -244,6 +244,22 @@ body {
   margin-top: 14px;
 }
 
+.project-label + .project-label {
+  margin-top: 20px;
+}
+
+/* Visual gap between unrelated photos in a shared row */
+.img-separated {
+  margin-left: 40px;
+}
+
+/* AIC badge on about page */
+.aic-badge {
+  display: block;
+  width: 110px;
+  margin: 20px 0;
+}
+
 .label-title {
   display: none;
 }
