@@ -176,7 +176,16 @@
     <a href="../about/index.html">About / Contact</a>
   </nav>
 
-  <!-- hover handled by CSS -->
+  <!-- hover handled by CSS; tap-toggle handled by JS on touch devices -->
+  <script>
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      document.querySelectorAll('.gallery .gallery-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+          this.classList.toggle('is-tapped');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

@@ -288,3 +288,17 @@ body {
     height: auto;
   }
 }
+
+/* ============================================================
+   TOUCH DEVICES — tap to toggle before/after (no hover)
+   ============================================================ */
+
+@media (hover: none) {
+  /* Neutralise the sticky CSS hover on touch */
+  .gallery .gallery-item:hover .img-before { opacity: 1; }
+  .gallery .gallery-item:hover .img-after  { opacity: 0; }
+
+  /* JS-toggled class drives the reveal instead */
+  .gallery .gallery-item.is-tapped .img-before { opacity: 0; }
+  .gallery .gallery-item.is-tapped .img-after  { opacity: 1; }
+}
