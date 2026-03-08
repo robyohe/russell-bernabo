@@ -334,13 +334,18 @@ body {
     padding: 0 4px;
   }
 
-  /* Smaller OOI cards on mobile to match JS layout calculations */
+  /* Smaller OOI cards on mobile — fixed size prevents resize on flip */
   .ooi-card {
-    padding: 8px;
+    padding: 6px;
+    width: 84px;
+    height: 104px;
   }
   .ooi-card img {
-    max-width: 80px;
-    max-height: 100px;
+    max-width: 72px;
+    max-height: 92px;
+  }
+  .ooi-item.is-open {
+    z-index: 20; /* bring tapped item above others */
   }
 }
 
