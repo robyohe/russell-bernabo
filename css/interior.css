@@ -240,6 +240,15 @@ body {
   height: 560px;
 }
 
+/* Last image fills remaining width so the row aligns with rows below */
+.project-images.row-large .img-solo:last-child {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
 .project-label {
   margin-top: 14px;
 }
@@ -302,6 +311,10 @@ body {
   }
   .project-images.row-large .img-solo {
     height: auto;
+  }
+  .project-images.row-large .img-solo:last-child {
+    flex: initial;
+    width: 100%;
   }
 }
 
