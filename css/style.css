@@ -334,6 +334,10 @@ body {
 @media (hover: none) {
   .card {
     transition: none;
+    transform-style: flat;
+  }
+  .card-back {
+    display: none;
   }
   .card-wrap:hover .card,
   .card-wrap:focus .card {
