@@ -301,3 +301,26 @@ body {
   color: var(--clr-gold-sub);
   line-height: 2;
 }
+
+/* ============================================================
+   MOBILE — bottom banner equal thirds
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .bottom-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    justify-items: center;
+  }
+
+  .bottom-banner a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 0.1em;
+    padding: 0 4px;
+  }
+}
