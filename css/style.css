@@ -309,11 +309,19 @@ body {
    ============================================================ */
 
 @media (max-width: 700px) {
+  /* Disable double-tap zoom; pinch zoom still works */
+  html, body {
+    touch-action: manipulation;
+  }
+
   .bottom-banner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0;
     justify-items: center;
+    /* Force own compositing layer so nav stays fixed during zoom */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   .bottom-banner a {
