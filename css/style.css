@@ -110,30 +110,30 @@ body {
 }
 
 .ooi-info {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  text-align: center;
-  min-width: 90px;
-  min-height: 60px;
-  justify-content: center;
-}
-
-.ooi-item.is-open .ooi-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  text-align: center;
+  overflow: hidden;
+  max-height: 0;
+  max-width: 0;
+  padding-top: 0;
+  transition: max-height 0.35s ease, max-width 0.35s ease, padding-top 0.25s ease;
 }
 
-/* Desktop hover — card expands naturally to reveal text below image; image stays visible for dragging */
+.ooi-item.is-open .ooi-info {
+  max-height: 200px;
+  max-width: 200px;
+  padding-top: 8px;
+}
+
+/* Desktop hover — card grows in all directions to reveal text below image; image stays visible for dragging */
 @media (hover: hover) {
   .ooi-item:hover .ooi-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
+    max-height: 200px;
+    max-width: 200px;
+    padding-top: 8px;
   }
 }
 
