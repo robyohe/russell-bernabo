@@ -121,11 +121,11 @@ body {
   max-width: 0;
   min-width: 0;
   overflow: hidden;
-  /* Collapse: fade out (0.15s), then snap everything closed instantly */
-  transition: opacity 0.15s ease,
-              max-height 0s 0.15s,
-              max-width  0s 0.15s,
-              padding    0s 0.15s;
+  /* Collapse: fade text out, then smoothly shrink card */
+  transition: opacity    0.15s ease,
+              max-height 0.2s ease 0.15s,
+              max-width  0.2s ease 0.15s,
+              padding    0.2s ease 0.15s;
 }
 
 /* Mobile tap: reveal info */
@@ -136,7 +136,7 @@ body {
   padding: 8px 6px;
 }
 
-/* Desktop hover: expand smoothly, fade in after width settles */
+/* Desktop hover: width snaps, height grows, text fades in */
 @media (hover: hover) {
   .ooi-item:hover .ooi-info {
     opacity: 1;
@@ -144,9 +144,8 @@ body {
     max-width: 200px;
     padding: 8px 6px;
     transition: max-height 0.25s ease,
-                max-width  0.25s ease,
                 padding    0.25s ease,
-                opacity    0.2s ease 0.12s;
+                opacity    0.2s ease;
   }
 }
 
