@@ -372,9 +372,10 @@
         }
 
         boxes.forEach(function (box) {
+          var elH = box.el.offsetHeight || 0;
           box.el.style.left        = box.x + 'px';
-          box.el.style.top         = box.y + 'px';
-          box.el.style.transform   = 'translate(-50%, -50%)';
+          box.el.style.top         = (box.y - elH / 2) + 'px';
+          box.el.style.transform   = 'translateX(-50%)';
           box.el.style.visibility  = 'visible';
         });
       }
@@ -404,9 +405,10 @@
           g.items.forEach(function (item, i) {
             var x = (i + 1) * W / (n + 1);
             var y = zoneCY + (Math.random() - 0.5) * jitter;
+            var elH = item.offsetHeight || 0;
             item.style.left       = x + 'px';
-            item.style.top        = y + 'px';
-            item.style.transform  = 'translate(-50%, -50%)';
+            item.style.top        = (y - elH / 2) + 'px';
+            item.style.transform  = 'translateX(-50%)';
             item.style.visibility = 'visible';
           });
         });
