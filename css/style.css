@@ -339,6 +339,7 @@ body {
     padding: 6px;
     width: 84px;
     height: 104px;
+    justify-content: center;
   }
   .ooi-card img {
     max-width: 72px;
