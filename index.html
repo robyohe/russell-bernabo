@@ -451,28 +451,35 @@
         visible.forEach(function (item) {
           var card = item.querySelector('.ooi-card');
           var info = item.querySelector('.ooi-info');
-          var collapsedH;
+          var collapsedH = 0;
+          var collapseTimer = null;
 
           item.addEventListener('mouseenter', function () {
+            clearTimeout(collapseTimer);
             if (item.classList.contains('is-open')) return;
-            collapsedH = card.offsetHeight;
-            card.style.overflow  = 'hidden';
-            card.style.maxHeight = collapsedH + 'px';
-            info.style.display   = 'flex';
-            card.offsetHeight;                              /* force reflow */
+            if (!collapsedH) collapsedH = card.offsetHeight;
+            card.style.overflow   = 'hidden';
+            card.style.transition = 'none';
+            card.style.maxHeight  = collapsedH + 'px';
+            info.style.display    = 'flex';
+            card.offsetHeight;                               /* force reflow */
             card.style.transition = 'max-height 0.35s ease';
             card.style.maxHeight  = card.scrollHeight + 'px';
           });
 
           item.addEventListener('mouseleave', function () {
             if (item.classList.contains('is-open')) return;
-            card.style.maxHeight = collapsedH + 'px';
-            card.addEventListener('transitionend', function () {
-              info.style.display   = '';
-              card.style.maxHeight = '';
-              card.style.overflow  = '';
-              card.style.transition = '';
-            }, { once: true });
+            collapseTimer = setTimeout(function () {
+              if (item.matches(':hover')) return;
+              card.style.maxHeight = collapsedH + 'px';
+              setTimeout(function () {
+                if (item.matches(':hover')) return;
+                info.style.display    = '';
+                card.style.maxHeight  = '';
+                card.style.overflow   = '';
+                card.style.transition = '';
+              }, 380);
+            }, 40);
           });
         });
       });
