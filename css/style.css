@@ -360,6 +360,13 @@ body {
   .ooi-item.is-open {
     z-index: 20; /* bring tapped item above others */
   }
+  /* Constrain is-open info to fit within fixed 84x104 mobile card */
+  .ooi-item.is-open .ooi-info {
+    max-height: 90px;
+    max-width: 72px;
+    padding-top: 4px;
+    transition: none;
+  }
 }
 
 /* ============================================================
