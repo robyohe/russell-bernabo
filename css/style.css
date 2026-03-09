@@ -89,6 +89,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   transition: background 0.3s ease;
 }
 
@@ -100,40 +101,38 @@ body {
   height: auto;
 }
 
-/* Text state: dark surface, image hidden */
-.ooi-item.is-open .ooi-card {
-  background: var(--clr-surface);
-}
-
-.ooi-item.is-open .ooi-card img {
-  display: none;
-}
-
 .ooi-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
   text-align: center;
+  background: var(--clr-ooi-bg);
+  border: 1px solid var(--clr-border);
+  border-top: none;
   overflow: hidden;
   max-height: 0;
-  max-width: 0;
-  padding-top: 0;
-  transition: max-height 0.35s ease, padding-top 0.25s ease;
+  padding: 0 6px;
+  z-index: 5;
+  transition: max-height 0.35s ease, padding-top 0.25s ease, padding-bottom 0.25s ease;
 }
 
 .ooi-item.is-open .ooi-info {
   max-height: 200px;
-  max-width: 200px;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-/* Desktop hover — card grows in all directions to reveal text below image; image stays visible for dragging */
+/* Desktop hover — info slides out below card; text width stable (no reflow), image always visible */
 @media (hover: hover) {
   .ooi-item:hover .ooi-info {
     max-height: 200px;
-    max-width: 200px;
     padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 
@@ -360,13 +359,7 @@ body {
   .ooi-item.is-open {
     z-index: 20; /* bring tapped item above others */
   }
-  /* Constrain is-open info to fit within fixed 84x104 mobile card */
-  .ooi-item.is-open .ooi-info {
-    max-height: 90px;
-    max-width: 72px;
-    padding-top: 4px;
-    transition: none;
-  }
+
 }
 
 /* ============================================================
