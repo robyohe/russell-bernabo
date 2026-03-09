@@ -121,11 +121,11 @@ body {
   max-width: 0;
   min-width: 0;
   overflow: hidden;
-  /* Collapse: fade text out, then smoothly shrink card */
-  transition: opacity    0.15s ease,
-              max-height 0.2s ease 0.15s,
-              max-width  0.2s ease 0.15s,
-              padding    0.2s ease 0.15s;
+  /* Collapse: shrink + fade together (reflow hidden by fading opacity) */
+  transition: opacity    0.3s ease,
+              max-height 0.3s ease,
+              max-width  0.3s ease,
+              padding    0.3s ease;
 }
 
 /* Mobile tap: reveal info */
