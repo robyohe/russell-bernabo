@@ -114,18 +114,19 @@ body {
   align-items: center;
   gap: 6px;
   text-align: center;
-  padding: 8px 6px;
+  padding: 0 6px;
   max-height: 0;
   max-width: 0;
   min-width: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 /* Mobile tap: reveal info */
 .ooi-item.is-open .ooi-info {
   max-height: 200px;
   max-width: 200px;
+  padding: 8px 6px;
 }
 
 /* Desktop hover: info expands below image, card grows downward */
@@ -133,6 +134,7 @@ body {
   .ooi-item:hover .ooi-info {
     max-height: 200px;
     max-width: 200px;
+    padding: 8px 6px;
   }
 }
 
