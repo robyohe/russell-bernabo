@@ -88,7 +88,7 @@ body {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   transition: background 0.3s ease;
 }
 
@@ -109,38 +109,31 @@ body {
 }
 
 .ooi-info {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
   text-align: center;
   padding: 8px 6px;
-  min-width: 90px;
+  max-height: 0;
+  max-width: 0;
+  min-width: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
+/* Mobile tap: reveal info */
 .ooi-item.is-open .ooi-info {
-  display: flex;
+  max-height: 200px;
+  max-width: 200px;
 }
 
-/* Desktop hover: info panel appears below card, card/image never move */
+/* Desktop hover: info expands below image, card grows downward */
 @media (hover: hover) {
   .ooi-item:hover .ooi-info {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    left: -1px;
-    right: -1px;
-    background: var(--clr-ooi-bg);
-    border: 1px solid var(--clr-border);
-    border-top: none;
-    z-index: 10;
-    animation: ooi-info-in 0.2s ease forwards;
+    max-height: 200px;
+    max-width: 200px;
   }
-}
-
-@keyframes ooi-info-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
 }
 
 .ooi-title {
@@ -358,6 +351,7 @@ body {
     padding: 6px;
     width: 84px;
     height: 104px;
+    justify-content: center;
   }
   .ooi-card img {
     max-width: 72px;
