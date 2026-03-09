@@ -447,50 +447,6 @@
         visible.forEach(function (it) { it.classList.remove('is-open'); });
       });
 
-      /* Desktop hover: expand card downward, image stays fixed */
-      window.addEventListener('load', function () {
-        if (!window.matchMedia('(hover: hover)').matches) return;
-        visible.forEach(function (item) {
-          var card = item.querySelector('.ooi-card');
-          var info = item.querySelector('.ooi-info');
-          var collapsedH = 0;
-          var collapseTimer = null;
-          var dur = '0.35s ease';
-
-          item.addEventListener('mouseenter', function () {
-            clearTimeout(collapseTimer);
-            if (!collapsedH) collapsedH = card.offsetHeight;
-            card.style.overflow   = 'hidden';
-            card.style.transition = 'none';
-            card.style.maxHeight  = collapsedH + 'px';
-            info.style.display    = 'flex';
-            card.offsetHeight;                                /* force reflow */
-            var expandedH = card.scrollHeight;
-            var shift     = (expandedH - collapsedH) / 2;   /* compensate translate(-50%,-50%) */
-            card.style.transition = 'max-height ' + dur;
-            item.style.transition = 'transform ' + dur;
-            card.style.maxHeight  = expandedH + 'px';
-            item.style.transform  = 'translate(-50%, calc(-50% + ' + shift + 'px))';
-          });
-
-          item.addEventListener('mouseleave', function () {
-            collapseTimer = setTimeout(function () {
-              if (item.matches(':hover')) return;
-              card.style.maxHeight = collapsedH + 'px';
-              item.style.transform = 'translate(-50%, -50%)';
-              setTimeout(function () {
-                if (item.matches(':hover')) return;
-                info.style.display    = '';
-                card.style.maxHeight  = '';
-                card.style.overflow   = '';
-                card.style.transition = '';
-                item.style.transition = '';
-                item.style.transform  = '';
-              }, 380);
-            }, 40);
-          });
-        });
-      });
 
     })();
   </script>
