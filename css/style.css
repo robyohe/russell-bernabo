@@ -98,6 +98,7 @@ body {
   max-height: 140px;
   width: auto;
   height: auto;
+  flex-shrink: 0;
 }
 
 /* Text state: dark surface, image hidden (mobile tap) */
@@ -115,16 +116,19 @@ body {
   gap: 6px;
   text-align: center;
   padding: 0 6px;
+  opacity: 0;
   max-height: 0;
   max-width: 0;
   min-width: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  /* Collapse: fade out first, then height shrinks */
+  transition: opacity 0.15s ease, max-height 0.2s ease 0.15s, padding 0.2s ease 0.15s;
 }
 
 /* Mobile tap: reveal info */
 .ooi-item.is-open .ooi-info {
-  max-height: 200px;
+  opacity: 1;
+  max-height: 80px;
   max-width: 200px;
   padding: 8px 6px;
 }
@@ -132,9 +136,12 @@ body {
 /* Desktop hover: info expands below image, card grows downward */
 @media (hover: hover) {
   .ooi-item:hover .ooi-info {
-    max-height: 200px;
+    opacity: 1;
+    max-height: 80px;
     max-width: 200px;
     padding: 8px 6px;
+    /* Expand: height grows first, opacity fades in */
+    transition: max-height 0.25s ease, padding 0.25s ease, opacity 0.2s ease;
   }
 }
 
