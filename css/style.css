@@ -119,7 +119,7 @@ body {
   max-height: 0;
   max-width: 0;
   padding-top: 0;
-  transition: max-height 0.35s ease, max-width 0.35s ease, padding-top 0.25s ease;
+  transition: max-height 0.35s ease, padding-top 0.25s ease;
 }
 
 .ooi-item.is-open .ooi-info {
