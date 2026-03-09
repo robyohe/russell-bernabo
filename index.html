@@ -443,6 +443,7 @@
       });
 
       document.addEventListener('click', function () {
+        if (window.matchMedia('(hover: hover)').matches) return;
         visible.forEach(function (it) { it.classList.remove('is-open'); });
       });
 
