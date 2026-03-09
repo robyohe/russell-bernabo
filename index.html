@@ -431,9 +431,10 @@
       });
       if (imagesPending === 0) layout();
 
-      /* Click: open/close info */
+      /* Click: open/close info (mobile tap only) */
       visible.forEach(function (item) {
         item.addEventListener('click', function (e) {
+          if (window.matchMedia('(hover: hover)').matches) return;
           var wasOpen = item.classList.contains('is-open');
           visible.forEach(function (it) { it.classList.remove('is-open'); });
           if (!wasOpen) item.classList.add('is-open');
@@ -445,7 +446,7 @@
         visible.forEach(function (it) { it.classList.remove('is-open'); });
       });
 
-      /* Desktop hover: JS-driven smooth expansion — no text reflow */
+      /* Desktop hover: expand card downward, image stays fixed */
       window.addEventListener('load', function () {
         if (!window.matchMedia('(hover: hover)').matches) return;
         visible.forEach(function (item) {
@@ -453,31 +454,37 @@
           var info = item.querySelector('.ooi-info');
           var collapsedH = 0;
           var collapseTimer = null;
+          var dur = '0.35s ease';
 
           item.addEventListener('mouseenter', function () {
             clearTimeout(collapseTimer);
-            if (item.classList.contains('is-open')) return;
             if (!collapsedH) collapsedH = card.offsetHeight;
             card.style.overflow   = 'hidden';
             card.style.transition = 'none';
             card.style.maxHeight  = collapsedH + 'px';
             info.style.display    = 'flex';
-            card.offsetHeight;                               /* force reflow */
-            card.style.transition = 'max-height 0.35s ease';
-            card.style.maxHeight  = card.scrollHeight + 'px';
+            card.offsetHeight;                                /* force reflow */
+            var expandedH = card.scrollHeight;
+            var shift     = (expandedH - collapsedH) / 2;   /* compensate translate(-50%,-50%) */
+            card.style.transition = 'max-height ' + dur;
+            item.style.transition = 'transform ' + dur;
+            card.style.maxHeight  = expandedH + 'px';
+            item.style.transform  = 'translate(-50%, calc(-50% + ' + shift + 'px))';
           });
 
           item.addEventListener('mouseleave', function () {
-            if (item.classList.contains('is-open')) return;
             collapseTimer = setTimeout(function () {
               if (item.matches(':hover')) return;
               card.style.maxHeight = collapsedH + 'px';
+              item.style.transform = 'translate(-50%, -50%)';
               setTimeout(function () {
                 if (item.matches(':hover')) return;
                 info.style.display    = '';
                 card.style.maxHeight  = '';
                 card.style.overflow   = '';
                 card.style.transition = '';
+                item.style.transition = '';
+                item.style.transform  = '';
               }, 380);
             }, 40);
           });
