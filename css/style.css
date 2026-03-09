@@ -114,15 +114,34 @@ body {
   align-items: center;
   gap: 6px;
   text-align: center;
-  min-width: 90px;
   padding: 8px 6px;
+  min-width: 90px;
 }
 
 .ooi-item.is-open .ooi-info {
   display: flex;
 }
 
-/* Desktop hover handled by JS for smooth animation */
+/* Desktop hover: info panel appears below card, card/image never move */
+@media (hover: hover) {
+  .ooi-item:hover .ooi-info {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+    background: var(--clr-ooi-bg);
+    border: 1px solid var(--clr-border);
+    border-top: none;
+    z-index: 10;
+    animation: ooi-info-in 0.2s ease forwards;
+  }
+}
+
+@keyframes ooi-info-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
 .ooi-title {
   display: none;
@@ -339,7 +358,6 @@ body {
     padding: 6px;
     width: 84px;
     height: 104px;
-    justify-content: center;
   }
   .ooi-card img {
     max-width: 72px;
