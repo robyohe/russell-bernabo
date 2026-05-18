@@ -211,6 +211,10 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+.card-logo {
+  width: 180px;
+  height: auto;
+}
 
 .name {
   font-family: 'tonos', sans-serif;
