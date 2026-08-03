@@ -1,0 +1,11 @@
+# Redirect rules for https://www.russellbernabo.com
+
+# Force http -> https and non-www -> www
+http://*    https://www.russellbernabo.com/:splat   301!
+https://russellbernabo.com/*   https://www.russellbernabo.com/:splat   301!
+
+# Specific 404 mappings
+/directions.html    https://www.russellbernabo.com/about/        301
+/about_frame.html   https://www.russellbernabo.com/gilded-surfaces/  301
+/saddles.html       https://www.russellbernabo.com/             301
+/index-2.html       https://www.russellbernabo.com/             301
