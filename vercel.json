@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "http://:path*", "destination": "https://russellbernabo.com/:path*", "permanent": true },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.russellbernabo.com" }], "destination": "https://russellbernabo.com/:path*", "permanent": true },
+    { "source": "/directions.html", "destination": "/about/", "permanent": true },
+    { "source": "/about_frame.html", "destination": "/gilded-surfaces/", "permanent": true },
+    { "source": "/saddles.html", "destination": "/", "permanent": true },
+    { "source": "/index-2.html", "destination": "/", "permanent": true }
+  ]
+}

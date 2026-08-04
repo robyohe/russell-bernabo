@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.russellbernabo.com/sitemap.xml
+Sitemap: https://russellbernabo.com/sitemap.xml
