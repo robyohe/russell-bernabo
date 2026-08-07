@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="../css/interior.css">
   <meta name="description" content="Gilded Surfaces — Russell Bernabo restores gold leaf picture frames, mirrors, and gilded objects in Ashland, Virginia.">
   <meta name="keywords" content="Russell Bernabo, gilded surfaces, gold leaf, gilding, gilt, picture frame restoration, gold frame restoration, mirror restoration, gilded objects, Ashland, art conservation">
-  <link rel="canonical" href="https://www.russellbernabo.com/gilded-surfaces/">
+  <link rel="canonical" href="https://russellbernabo.com/gilded-surfaces/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.russellbernabo.com/gilded-surfaces/">
+  <meta property="og:url" content="https://russellbernabo.com/gilded-surfaces/">
   <meta property="og:title" content="Gilded Surfaces — Russell Bernabo">
   <meta property="og:description" content="Before and after: Russell Bernabo restores gold leaf picture frames, mirrors, and gilded objects in Ashland, Virginia.">
-  <meta property="og:image" content="https://www.russellbernabo.com/gilded/Avenel%202.JPG">
+  <meta property="og:image" content="https://russellbernabo.com/gilded/Avenel%202.JPG">
   <meta property="og:image:alt" content="Gold leaf frame restoration by Russell Bernabo">
 </head>
 <body>
@@ -27,7 +27,12 @@
   <main class="interior-content">
     <h1>Gilded Surfaces</h1>
 
-    <p class="gallery-instruction">Hover over any image to reveal the after.</p>
+    <div class="copy">
+      <p>Frames intended to be beautifying companions to paintings, drawings, and prints can devolve into unsightly liabilities. The frame and artwork, once engaged in a meaningful dialogue, are no longer on speaking terms. Our specialization in gilded frames can help resolve this conflict with conservation treatments that are visually pleasing, wholly ethical, and designed to satisfy the frame, the artwork, and the owner.</p>
+    </div>
+
+    <p class="gallery-instruction gallery-instruction--desktop">Hover over any before-treatment image to reveal after-treatment</p>
+    <p class="gallery-instruction gallery-instruction--mobile">Tap on any before-treatment image to reveal after-treatment</p>
 
     <div class="gallery">
 
@@ -156,11 +161,32 @@
           <img class="img-after"  src="../gilded/Melrose%202.JPG" alt="Melrose after">
         </div>
       </div>
-
+    
+      <div class="gallery-item">
+        <div class="item-img-wrap">
+          <img class="img-before" src="../gilded/Eichner%201.jpg" alt="Eichner before">
+          <img class="img-after"  src="../gilded/Eichner%202.jpg" alt="Eichner after">
+        </div>
+      </div>
+      
       <div class="gallery-item">
         <div class="item-img-wrap">
           <img class="img-before" src="../gilded/Skjei%201.JPG" alt="Skjei before">
           <img class="img-after"  src="../gilded/Skjei%202.JPG" alt="Skjei after">
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="item-img-wrap">
+          <img class="img-before" src="../gilded/Balustrade%201.jpg" alt="Balustrade before">
+          <img class="img-after"  src="../gilded/Balustrade%202.jpg" alt="Balustrade after">
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="item-img-wrap">
+          <img class="img-before" src="../gilded/Rococo%201.jpg" alt="Rococo before">
+          <img class="img-after"  src="../gilded/Rococo%202.jpg" alt="Rococo after">
         </div>
       </div>
 
@@ -173,12 +199,15 @@
     <a href="../about/index.html">About / Contact</a>
   </nav>
 
+  <!-- hover handled by CSS; tap-toggle handled by JS on touch devices -->
   <script>
-    document.querySelectorAll('.gallery-item').forEach(function(item) {
-      item.addEventListener('click', function() {
-        item.classList.toggle('is-tapped');
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      document.querySelectorAll('.gallery .gallery-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+          this.classList.toggle('is-tapped');
+        });
       });
-    });
+    }
   </script>
 
 </body>
