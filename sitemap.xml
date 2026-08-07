@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://russellbernabo.com/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://russellbernabo.com/images/bg.jpg</image:loc>
@@ -12,161 +12,309 @@
   </url>
   <url>
     <loc>https://russellbernabo.com/gilded-surfaces/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Avenel%201.JPG</image:loc>
-      <image:title>Avenel frame — before gold leaf restoration</image:title>
+      <image:title>Avenel gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Avenel%202.JPG</image:loc>
-      <image:title>Avenel frame — after gold leaf restoration</image:title>
+      <image:title>Avenel gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Botzow%201.JPG</image:loc>
-      <image:title>Botzow frame — before restoration</image:title>
+      <image:title>Botzow gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Botzow%202.JPG</image:loc>
-      <image:title>Botzow frame — after restoration</image:title>
+      <image:title>Botzow gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Brugh%201.JPG</image:loc>
-      <image:title>Brugh frame — before restoration</image:title>
+      <image:title>Brugh gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Brugh%202.JPG</image:loc>
-      <image:title>Brugh frame — after restoration</image:title>
+      <image:title>Brugh gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Caracci%201.JPG</image:loc>
-      <image:title>Caracci frame — before restoration</image:title>
+      <image:title>Caracci gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Caracci%202.JPG</image:loc>
-      <image:title>Caracci frame — after restoration</image:title>
+      <image:title>Caracci gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Curling%201.JPG</image:loc>
-      <image:title>Curling frame — before restoration</image:title>
+      <image:title>Curling gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Curling%202.JPG</image:loc>
-      <image:title>Curling frame — after restoration</image:title>
+      <image:title>Curling gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Dickson%201.JPG</image:loc>
-      <image:title>Dickson frame — before restoration</image:title>
+      <image:title>Dickson gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Dickson%202.JPG</image:loc>
-      <image:title>Dickson frame — after restoration</image:title>
+      <image:title>Dickson gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/El%20Bostic%201.JPG</image:loc>
-      <image:title>El Bostic frame — before restoration</image:title>
+      <image:title>El Bostic gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/El%20Bostic%202.JPG</image:loc>
-      <image:title>El Bostic frame — after restoration</image:title>
+      <image:title>El Bostic gilded frame after gold leaf restoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/gilded/Eleanor%20Bo%201.JPG</image:loc>
+      <image:title>Eleanor Bo gilded frame before conservation treatment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/gilded/Eleanor%20Bo%202.JPG</image:loc>
+      <image:title>Eleanor Bo gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Eleanor%20Bostic%201.JPG</image:loc>
-      <image:title>Eleanor Bostic frame — before restoration</image:title>
+      <image:title>Eleanor Bostic gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Eleanor%20Bostic%202.JPG</image:loc>
-      <image:title>Eleanor Bostic frame — after restoration</image:title>
+      <image:title>Eleanor Bostic gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Fischer%201.JPG</image:loc>
-      <image:title>Fischer frame — before restoration</image:title>
+      <image:title>Fischer gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Fischer%202.JPG</image:loc>
-      <image:title>Fischer frame — after restoration</image:title>
+      <image:title>Fischer gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Giles%201.jpg</image:loc>
-      <image:title>Giles frame — before restoration</image:title>
+      <image:title>Giles gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Giles%202.jpg</image:loc>
-      <image:title>Giles frame — after restoration</image:title>
+      <image:title>Giles gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Golmon%201.JPG</image:loc>
-      <image:title>Golmon frame — before restoration</image:title>
+      <image:title>Golmon gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Golmon%202.JPG</image:loc>
-      <image:title>Golmon frame — after restoration</image:title>
+      <image:title>Golmon gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Justice%201.JPG</image:loc>
-      <image:title>Justice frame — before restoration</image:title>
+      <image:title>Justice gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Justice%202.JPG</image:loc>
-      <image:title>Justice frame — after restoration</image:title>
+      <image:title>Justice gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Kappa%20Alpha%201.JPG</image:loc>
-      <image:title>Kappa Alpha frame — before restoration</image:title>
+      <image:title>Kappa Alpha gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Kappa%20Alpha%202.JPG</image:loc>
-      <image:title>Kappa Alpha frame — after restoration</image:title>
+      <image:title>Kappa Alpha gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Kohr%201.JPG</image:loc>
-      <image:title>Kohr frame — before restoration</image:title>
+      <image:title>Kohr gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Kohr%202.JPG</image:loc>
-      <image:title>Kohr frame — after restoration</image:title>
+      <image:title>Kohr gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Kurkjian%201.JPG</image:loc>
-      <image:title>Kurkjian frame — before restoration</image:title>
+      <image:title>Kurkjian gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Kurkjian%202.JPG</image:loc>
-      <image:title>Kurkjian frame — after restoration</image:title>
+      <image:title>Kurkjian gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Learned%201.JPG</image:loc>
-      <image:title>Learned frame — before restoration</image:title>
+      <image:title>Learned gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Learned%202.JPG</image:loc>
-      <image:title>Learned frame — after restoration</image:title>
+      <image:title>Learned gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Melrose%201.JPG</image:loc>
-      <image:title>Melrose frame — before restoration</image:title>
+      <image:title>Melrose gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Melrose%202.JPG</image:loc>
-      <image:title>Melrose frame — after restoration</image:title>
+      <image:title>Melrose gilded frame after gold leaf restoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/gilded/Eichner%201.jpg</image:loc>
+      <image:title>Eichner gilded frame before conservation treatment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/gilded/Eichner%202.jpg</image:loc>
+      <image:title>Eichner gilded frame after gold leaf restoration</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Skjei%201.JPG</image:loc>
-      <image:title>Skjei frame — before restoration</image:title>
+      <image:title>Skjei gilded frame before conservation treatment</image:title>
     </image:image>
     <image:image>
       <image:loc>https://russellbernabo.com/gilded/Skjei%202.JPG</image:loc>
-      <image:title>Skjei frame — after restoration</image:title>
+      <image:title>Skjei gilded frame after gold leaf restoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/gilded/Balustrade%201.jpg</image:loc>
+      <image:title>Gilded balustrade before conservation treatment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/gilded/Balustrade%202.jpg</image:loc>
+      <image:title>Gilded balustrade after gold leaf conservation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/gilded/Rococo%201.jpg</image:loc>
+      <image:title>Rococo gilded frame before conservation treatment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/gilded/Rococo%202.jpg</image:loc>
+      <image:title>Rococo gilded frame after gold leaf restoration</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://russellbernabo.com/other-projects/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/chandelier-1.jpg</image:loc>
+      <image:title>Chandelier from Broad Street Train Station, Richmond, Virginia — Alexander Pope, 1917</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/chandelier-2.jpg</image:loc>
+      <image:title>Broad Street Train Station chandelier — steel frame and milk glass panel conservation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/chandelier-3.jpg</image:loc>
+      <image:title>Broad Street Train Station chandelier — bronze ornament detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/classical-figures-1.jpg</image:loc>
+      <image:title>Pair of classical figures in cast plaster, England, 19th century</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/classical-figures-2.jpg</image:loc>
+      <image:title>Cast plaster classical figure — surface cleaning and restoration of losses</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/george-washington-1.jpg</image:loc>
+      <image:title>George Washington, life-size plaster casting — William James Hubard after Jean-Antoine Houdon, 1856</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/george-washington-2a.jpg</image:loc>
+      <image:title>George Washington plaster cast, Jamestown-Yorktown Foundation — conservation treatment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/george-washington-4b.jpg</image:loc>
+      <image:title>George Washington plaster cast — restoration of damage and compensation for losses</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/george-washington-2b.jpg</image:loc>
+      <image:title>George Washington plaster cast — structural repair detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/george-washington-3a.jpg</image:loc>
+      <image:title>George Washington plaster cast — removal of lead paint layers</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/george-washington-3b.jpg</image:loc>
+      <image:title>George Washington plaster cast — surface detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/george-washington-4a.jpg</image:loc>
+      <image:title>George Washington plaster cast — conservation detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/haunted-mansion-1a.jpg</image:loc>
+      <image:title>Miniature character model from The Haunted Mansion, Walt Disney Studios, circa 1969</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/haunted-mansion-1b.jpg</image:loc>
+      <image:title>Haunted Mansion miniature model — repairs and compensation for losses</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/haunted-mansion-2a.jpg</image:loc>
+      <image:title>Haunted Mansion character model, Disney World — object conservation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/haunted-mansion-2b.jpg</image:loc>
+      <image:title>Haunted Mansion miniature model with custom display stand</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/lafayette-1.jpg</image:loc>
+      <image:title>Souvenir of Lafayette's visit to America, circa 1824 — carved wooden elements in original brass frame</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/lafayette-2.jpg</image:loc>
+      <image:title>Lafayette souvenir, circa 1824 — reassembled carved wood mounted on inlaid board</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/telegraph-2.jpg</image:loc>
+      <image:title>Telegraph, 19th century — machined metal components on original wooden base</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/telegraph-1.jpg</image:loc>
+      <image:title>19th-century telegraph — corrosion removal and cleaning</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/mccormick-1.jpg</image:loc>
+      <image:title>Cyrus McCormick by John David Brcin, 1931, Washington &amp;amp; Lee University — cast bronze</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/mccormick-2.jpg</image:loc>
+      <image:title>Cyrus McCormick bronze sculpture — surface repairs and repatination</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/prologue-1.jpg</image:loc>
+      <image:title>Prologue by Robert Graham, 2001, FDR Memorial, Washington DC — cast bronze with hot chemical patina</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/three-servicemen-1.jpg</image:loc>
+      <image:title>Three Servicemen by Frederick Hart, 1984, Vietnam Veterans Memorial, Washington DC — cast bronze</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/womens-memorial-1.jpg</image:loc>
+      <image:title>Vietnam Women's Memorial by Glenna Goodacre, 1993, National Mall, Washington DC — cast bronze</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/imp-1b.jpg</image:loc>
+      <image:title>In Memory plaque, Vietnam Veterans Memorial Fund, 2004 — cast bronze with hot chemical patina</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/imp-1a.jpg</image:loc>
+      <image:title>In Memory plaque — seasonal bronze patina maintenance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/pulley-wheel-1b.jpg</image:loc>
+      <image:title>Cast iron pulley wheel from 19th-century coal mine, 66-inch diameter</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://russellbernabo.com/other-projects/images/pulley-wheel-1a.jpg</image:loc>
+      <image:title>Cast iron pulley wheel — structural repairs, metal stabilization, custom steel base</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://russellbernabo.com/about/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://russellbernabo.com/images/ooi/conservators-bio.png</image:loc>
