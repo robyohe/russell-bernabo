@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.russellbernabo.com/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.russellbernabo.com/images/bg.jpg</image:loc>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://www.russellbernabo.com/gilded-surfaces/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.russellbernabo.com/gilded/Avenel%201.JPG</image:loc>
@@ -161,12 +161,12 @@
   </url>
   <url>
     <loc>https://www.russellbernabo.com/other-projects/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.russellbernabo.com/about/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.russellbernabo.com/images/ooi/conservators-bio.png</image:loc>
